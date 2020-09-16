@@ -4,9 +4,9 @@ Notebooks and tools for forecasting consumer price index (CPI) using scikit-lear
 
 ## Dependencies
 
-- (Optuna)[https://optuna.org/]
-- (FRED API)[https://pypi.org/project/fredapi/]
-- (stats_can API)[https://github.com/ianepreston/stats_can]
+- [https://optuna.org/](Optuna)
+- [https://pypi.org/project/fredapi/](FRED API)
+- [https://github.com/ianepreston/stats_can](stats_can API)
 
 ## Usage
 
