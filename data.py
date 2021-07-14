@@ -7,6 +7,7 @@ import numpy as np
 from fredapi import Fred
 from stats_can import StatsCan
 import os
+from time import sleep
 
 API_KEY = "b87bd38f4622b9c19ed583bcfc97bd3e"
 
@@ -23,7 +24,7 @@ food_categories = ["Bakery and cereal products (excluding baby food)",
 regions = ["Canada"]
 
 
-def load_fred(data_sources, min_date="1986-01-01", max_date=None):
+def load_fred(data_sources, min_date="1986-01-01", max_date=None, sleep_sec=0.05):
     """
     Load economic data using the FRED API.
     :param data_sources: A list of FRED series names to query.
@@ -33,11 +34,13 @@ def load_fred(data_sources, min_date="1986-01-01", max_date=None):
     """
     all_series = {}
     fred = Fred(api_key=API_KEY)
-    for source in data_sources:
+    for index, source in enumerate(data_sources):
         try:
             series = fred.get_series(source, min_date, max_date)
             series = series[series.index >= min_date]
             all_series[source] = series
+            print(f"{source} loaded successfully, {index+1} of {len(data_sources)}.", end='\r')
+            sleep(sleep_sec)
         except Exception as e:
             print(e)
     all_df = pd.DataFrame(all_series)
