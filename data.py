@@ -9,8 +9,6 @@ from stats_can import StatsCan
 import os
 from time import sleep
 
-API_KEY = "b87bd38f4622b9c19ed583bcfc97bd3e"
-
 food_categories = ["Bakery and cereal products (excluding baby food)",
                    "Dairy products and eggs",
                    "Fish, seafood and other marine products",
@@ -24,7 +22,7 @@ food_categories = ["Bakery and cereal products (excluding baby food)",
 regions = ["Canada"]
 
 
-def load_fred(data_sources, min_date="1986-01-01", max_date=None, sleep_sec=0.05):
+def load_fred(data_sources, api_key=None, min_date="1986-01-01", max_date=None, sleep_sec=0.05):
     """
     Load economic data using the FRED API.
     :param data_sources: A list of FRED series names to query.
@@ -33,7 +31,7 @@ def load_fred(data_sources, min_date="1986-01-01", max_date=None, sleep_sec=0.05
     :return: Economic data for the selected series and date ranges as a DataFrame.
     """
     all_series = {}
-    fred = Fred(api_key=API_KEY)
+    fred = Fred(api_key=api_key)
     for index, source in enumerate(data_sources):
         try:
             series = fred.get_series(source, min_date, max_date)
@@ -114,22 +112,22 @@ def preprocess_targets(targets_df, columns=None, interpolate=True,
     return targets_df[columns]
 
 
-def update_expl_data(data_sources, expl_filename):
+def update_expl_data(data_sources, expl_filename, api_key=None):
     if os.path.exists(expl_filename):
         # Update values for existing rows
         expl_df = pd.read_csv(expl_filename, index_col=0)
         expl_df.index = pd.to_datetime(expl_df.index)
         last_date = expl_df.index[-1]
-        new_rows = load_fred(data_sources=expl_df.columns, min_date=last_date + pd.DateOffset(days=1))
+        new_rows = load_fred(data_sources=expl_df.columns, min_date=last_date + pd.DateOffset(days=1), api_key=api_key)
         expl_df = expl_df.append(new_rows)
         # Add new columns, if necessary
         new_data_sources = [ds for ds in data_sources if ds not in expl_df.columns]
-        new_df = load_fred(data_sources=new_data_sources, min_date=expl_df.index[0], max_date=expl_df.index[-1])
+        new_df = load_fred(data_sources=new_data_sources, min_date=expl_df.index[0], max_date=expl_df.index[-1], api_key=api_key)
         if len(new_df.columns) > 0:
             expl_df = expl_df.join(new_df, how='right')
         expl_df.to_csv(expl_filename)
     else:
-        expl_df = load_fred(data_sources=data_sources, max_date='2019-12-31')
+        expl_df = load_fred(data_sources=data_sources, max_date='2019-12-31', api_key=api_key)
         expl_df.to_csv(expl_filename)
     return expl_df[data_sources]
 
