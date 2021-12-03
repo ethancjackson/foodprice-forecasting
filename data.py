@@ -112,13 +112,13 @@ def preprocess_targets(targets_df, columns=None, interpolate=True,
     return targets_df[columns]
 
 
-def update_expl_data(data_sources, expl_filename, api_key=None):
+def update_expl_data(data_sources, expl_filename, api_key=None, sleep_sec=0.05):
     if os.path.exists(expl_filename):
         # Update values for existing rows
         expl_df = pd.read_csv(expl_filename, index_col=0)
         expl_df.index = pd.to_datetime(expl_df.index)
         last_date = expl_df.index[-1]
-        new_rows = load_fred(data_sources=expl_df.columns, min_date=last_date + pd.DateOffset(days=1), api_key=api_key)
+        new_rows = load_fred(data_sources=expl_df.columns, min_date=last_date + pd.DateOffset(days=1), api_key=api_key, sleep_sec=sleep_sec)
         expl_df = expl_df.append(new_rows)
         # Add new columns, if necessary
         new_data_sources = [ds for ds in data_sources if ds not in expl_df.columns]
