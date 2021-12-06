@@ -22,7 +22,7 @@ food_categories = ["Bakery and cereal products (excluding baby food)",
 regions = ["Canada"]
 
 
-def load_fred(data_sources, api_key=None, min_date="1986-01-01", max_date=None, sleep_sec=0.05):
+def load_fred(data_sources, api_key=None, min_date="1986-01-01", max_date=None, sleep_sec=0.5):
     """
     Load economic data using the FRED API.
     :param data_sources: A list of FRED series names to query.
@@ -34,11 +34,11 @@ def load_fred(data_sources, api_key=None, min_date="1986-01-01", max_date=None, 
     fred = Fred(api_key=api_key)
     for index, source in enumerate(data_sources):
         try:
+            sleep(sleep_sec)
             series = fred.get_series(source, min_date, max_date)
             series = series[series.index >= min_date]
             all_series[source] = series
             print(f"{source} loaded successfully, {index+1} of {len(data_sources)}.", end='\r')
-            sleep(sleep_sec)
         except Exception as e:
             print(e)
     all_df = pd.DataFrame(all_series)
@@ -55,7 +55,8 @@ def load_statscan(target_names, region='Canada', min_date="1986-01-01", max_date
     :return: CPI data for the selected categories and date ranges as a DataFrame.
     """
     sc = StatsCan("./statscan_data")
-    sc.update_tables()
+    if len(sc.downloaded_tables) > 0:
+        sc.update_tables()
     df = sc.table_to_df("18-10-0004-13")
     df = df.loc[df["GEO"] == region]
     all_target_data = {}
@@ -112,7 +113,7 @@ def preprocess_targets(targets_df, columns=None, interpolate=True,
     return targets_df[columns]
 
 
-def update_expl_data(data_sources, expl_filename, api_key=None, sleep_sec=0.05):
+def update_expl_data(data_sources, expl_filename, sleep_sec=0.5, api_key=None):
     if os.path.exists(expl_filename):
         # Update values for existing rows
         expl_df = pd.read_csv(expl_filename, index_col=0)
@@ -127,7 +128,7 @@ def update_expl_data(data_sources, expl_filename, api_key=None, sleep_sec=0.05):
             expl_df = expl_df.join(new_df, how='right')
         expl_df.to_csv(expl_filename)
     else:
-        expl_df = load_fred(data_sources=data_sources, max_date='2019-12-31', api_key=api_key)
+        expl_df = load_fred(data_sources=data_sources, max_date=None, api_key=api_key)
         expl_df.to_csv(expl_filename)
     return expl_df[data_sources]
 
