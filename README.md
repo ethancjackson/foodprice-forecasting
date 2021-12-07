@@ -57,6 +57,14 @@ This indicates that the best ensemble of models and forecasts for **Meat** we fo
 
 ### Running Experiments
 
+Experiments can be replicated by following these steps:
+
+- Run the notebook `load_data.ipynb` to produce the data file `all_data.csv`. You will be prompted for a FRED API key.
+- Run the notebook `forecasting-prophet-experiment.ipynb` to produce retrospective forecasts using Prophet.
+- Run the notebook `forecasting-nbeats-experiment.ipynb` to produce retrospective forecasts using N-BEATS (with historical food CPI only).
+- Run the notebook `forecasting-nbeatsfredvars-experiment.ipynb` to produce retrospective forecasts using N-BEATS (with historical food CPI and other FRED variables)
+- Run the notebook `forecasting-neuralprophet-experiment.ipynb` to produce many retrospective forecasts using NeuralProphet (many combinations of lag sizes and additional regressors are considered). 
+
 ### Producing Forecasts
 
 ## Our Results
