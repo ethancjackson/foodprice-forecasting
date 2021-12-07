@@ -98,4 +98,14 @@ Finally, aggregate and analyze ensembles of final forecasts. All figures and res
 
 ## Our Results
 
-
+|                          Category                         |                                                                        Best   Ensemble                                                                       |     Average   MAPE (± Std. Dev.)    |
+|:---------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------:|
+|     Bakery   and cereal products (excluding baby food)    |     ['neuralprophet_202110_IRLTLT01CAM156N_nlags_36',   'nbeatsfredvars_202110', 'neuralprophet_202110_CUSR0000SAF112_nlags_24']                             |           1.40%   (±0.88%)          |
+|     Dairy   products and eggs                             |     ['neuralprophet_202110_CUSR0000SAF112_nlags_48',   'nbeats_202110']                                                                                      |           1.55%   (±0.53%)          |
+|     Fish,   seafood and other marine products             |     ['neuralprophet_202110_CUSR0000SAF113_nlags_48',   'nbeats_202110', 'neuralprophet_202110_QCAR368BIS_nlags_60']                                          |           1.09%   (±0.20%)          |
+|     Food   purchased from restaurants                     |     ['nbeatsfredvars_202110',   'nbeats_202110', 'neuralprophet_202110_WILL5000IND_nlags_36']                                                                |           0.61%   (±0.37%)          |
+|     Food                                                  |     ['nbeatsfredvars_202110',   'neuralprophet_202110_CUSR0000SAF112_nlags_24',   'neuralprophet_202110_IRLTLT01CAM156N_nlags_60']                           |           0.76%   (±0.26%)          |
+|     Fruit,   fruit preparations and nuts                  |     ['neuralprophet_202110_CUSR0000SAF112_nlags_24',   'neuralprophet_202110_CUSR0000SAF112_nlags_36',   'neuralprophet_202110_CPALCY01CAM661N_nlags_24']    |           2.04%   (±0.71%)          |
+|     Meat                                                  |     ['nbeatsfredvars_202110',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'nbeats_202110']                                                             |           2.62%   (±1.10%)          |
+|     Other   food products and non-alcoholic beverages     |     ['neuralprophet_202110_VXOCLS_nlags_36',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'prophet_202110']                                             |           0.86%   (±0.39%)          |
+|     Vegetables   and vegetable preparations               |     ['neuralprophet_202110_DEXCAUS_nlags_24',   'neuralprophet_202110_WILL5000IND_nlags_60',   'neuralprophet_202110_CPGRLE01CAM657N_nlags_60']              |           2.94%   (±1.16%)          |
