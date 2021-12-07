@@ -92,7 +92,7 @@ With these results in hand, we can now produce this year's forecasts by refittin
 9. Run the notebook `forecasting-nbeatsfredvars-final.ipynb` to produce final forecasts using N-BEATS (with historical food CPI and other FRED variables)
 10. Run the notebook `forecasting-neuralprophet-final.ipynb` to produce final forecasts using NeuralProphet, which depends on the presence of `ensemble_results.pkl` to indicate which features and number of lags to use.
 
-Finally, aggregate and analyze ensembles of final forecasts.
+Finally, aggregate and analyze ensembles of final forecasts. All figures and results (i.e. predicted change in CPI) are produced within the notebook.
 
 11. Run the notebook `forecasting-ensemble-final.ipynb` to produce this year's forecasts and analysis.
 
