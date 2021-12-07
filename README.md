@@ -54,5 +54,3 @@ An example result of an ensembling experiment could be as follows:
 |     Meat        |     ['nbeatsfredvars_202110',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'nbeats_202110']    |           2.62%   (±1.10%)          |   |   |
 |                 |                                                                                                     |                                     |   |   |
 |                 |                                                                                                     |                                     |   |   |
-
-
