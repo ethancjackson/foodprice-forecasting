@@ -51,4 +51,6 @@ An example result of an ensembling experiment could be as follows:
 
 |     Category    |                                            Best   Ensemble                                          |     Average   MAPE (± Std. Dev.)    |
 |:---------------:|:---------------------------------------------------------------------------------------------------:|:-----------------------------------:|
-|     Meat        |     ['nbeatsfredvars_202110',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'nbeats_202110']    |           2.62%   (±1.10%)          |
+|     **Meat**        |     ['nbeatsfredvars_202110',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'nbeats_202110']    |           2.62%   (±1.10%)          |
+
+This indicates that the best ensemble of models and forecasts for **Meat** we found in retrospective analysis over the last 6 report years used two N-BEATS models (with and without FRED variables) and a NeuralProphet model that uses 24 monthly historical observations of prior Meat CPI and an additional lagged regressor (CUSR0000SAF112), which is the U.S. CPI for Meats, Poultry, Fish, and Eggs in urban areas.
