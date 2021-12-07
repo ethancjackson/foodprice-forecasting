@@ -111,3 +111,17 @@ The results of our retrospective (model selection) experiment are summarized bel
 |     Meat                                                  |     ['nbeatsfredvars_202110',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'nbeats_202110']                                                             |     2.62%   (±1.10%)                |
 |     Other   food products and non-alcoholic beverages     |     ['neuralprophet_202110_VXOCLS_nlags_36',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'prophet_202110']                                             |     0.86%   (±0.39%)                |
 |     Vegetables   and vegetable preparations               |     ['neuralprophet_202110_DEXCAUS_nlags_24',   'neuralprophet_202110_WILL5000IND_nlags_60',   'neuralprophet_202110_CPGRLE01CAM657N_nlags_60']              |     2.94%   (±1.16%)                |
+
+Several FRED variables were included in NeuralProphet models that were part of ensembles:
+
+| Variable ID     | Description                                                                                       |
+|-----------------|---------------------------------------------------------------------------------------------------|
+| CPALCY01CAM661N | Consumer Price Index: Total, All Items for Canada                                                 |
+| CUSR0000SAF112  | Consumer Price Index for All Urban Consumers: Meats, Poultry, Fish, and Eggs in U.S. City Average |
+| CUSR0000SAF113  | Consumer Price Index for All Urban Consumers: Fruits and Vegetables in U.S. City Average          |
+| CPGRLE01CAM657N | Consumer Price Index: OECD Groups: All Items Non-Food and Non-Energy for Canada                   |
+| DEXCAUS         | Canada / U.S. Foreign Exchange Rate                                                               |
+| IRLTLT01CAM156N | Long-Term Government Bond Yields: 10-year: Main (Including Benchmark) for Canada                  |
+| QCAR368BIS      | Real Residential Property Prices for Canada                                                       |
+| VXOCLS          | CBOE S&P 100 Volatility Index: VXO                                                                |
+| WILL5000IND     | Wilshire 5000 Total Market Index                                                                  |
