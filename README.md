@@ -41,7 +41,7 @@ We include a notebook (`load_data.ipynb`) for loading and preprocessing data fro
 
 After `load_data.ipynb` runs successfully, a file named `all_data.csv` will be produced. Please check that this file contains rows with datestamps up to the most recently elapsed month.
 
-### Running Experiments
+### Experiments Summary
 
 To produce this year's forecast, we used ensembling experiments to search for aggregate (i.e. mean) forecasts that would have been optimally accurate over the last 6 report years. The notebooks in this repository can be used to replicate our experiment, which is summarized as follows.
 
@@ -54,3 +54,11 @@ An example result of an ensembling experiment could be as follows:
 |     **Meat**        |     ['nbeatsfredvars_202110',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'nbeats_202110']    |           2.62%   (±1.10%)          |
 
 This indicates that the best ensemble of models and forecasts for **Meat** we found in retrospective analysis over the last 6 report years used two N-BEATS models (with and without FRED variables) and a NeuralProphet model that uses 24 monthly historical observations of prior Meat CPI and an additional lagged regressor (CUSR0000SAF112), which is the U.S. CPI for Meats, Poultry, Fish, and Eggs in urban areas.
+
+### Running Experiments
+
+### Producing Forecasts
+
+## Our Results
+
+
