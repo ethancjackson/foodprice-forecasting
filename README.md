@@ -59,11 +59,11 @@ This indicates that the best ensemble of models and forecasts for **Meat** we fo
 
 Experiments can be replicated by following these steps:
 
-- Run the notebook `load_data.ipynb` to produce the data file `all_data.csv`. You will be prompted for a FRED API key.
-- Run the notebook `forecasting-prophet-experiment.ipynb` to produce retrospective forecasts using Prophet.
-- Run the notebook `forecasting-nbeats-experiment.ipynb` to produce retrospective forecasts using N-BEATS (with historical food CPI only).
-- Run the notebook `forecasting-nbeatsfredvars-experiment.ipynb` to produce retrospective forecasts using N-BEATS (with historical food CPI and other FRED variables)
-- Run the notebook `forecasting-neuralprophet-experiment.ipynb` to produce many retrospective forecasts using NeuralProphet (many combinations of lag sizes and additional regressors are considered). 
+1. Run the notebook `load_data.ipynb` to produce the data file `all_data.csv`. You will be prompted for a FRED API key.
+2. Run the notebook `forecasting-prophet-experiment.ipynb` to produce retrospective forecasts using Prophet.
+3. Run the notebook `forecasting-nbeats-experiment.ipynb` to produce retrospective forecasts using N-BEATS (with historical food CPI only).
+4. Run the notebook `forecasting-nbeatsfredvars-experiment.ipynb` to produce retrospective forecasts using N-BEATS (with historical food CPI and other FRED variables)
+5. Run the notebook `forecasting-neuralprophet-experiment.ipynb` to produce many retrospective forecasts using NeuralProphet (many combinations of lag sizes and additional regressors are considered). 
 
 After these each of these notebooks have finished running, the resulting retrospective forecasts will be stored under the `./output` directory. For example, after running the notebook `forecasting-prophet-experiment.ipynb` using the default `output_path = 'prophet_TEST'` in Cell 2, you should find the following files in `./output/prophet_TEST`:
 
@@ -81,20 +81,20 @@ You may also find other output files (i.e. plots and figures) if options to save
 
 After successfully loading data and running the `experiment` notebooks to produce retrospective forecasts, we can move on to searching for ensembles of retrospective forecasts that have the lowest average error (MAPE).
 
-- Run the notebook `forecasting-ensemble-experiment.ipynb` to produce the ensemble experiment output file `ensemble_results.pkl`.
+6. Run the notebook `forecasting-ensemble-experiment.ipynb` to produce the ensemble experiment output file `ensemble_results.pkl`.
 
 The file `ensemble_results.pkl` is a serialized Pandas DataFrame containing two types of important information. For each food category, it specifies the composition of the best ensemble in retrospective analysis (e.g. `prophet_TEST`, `nbeatsfredvars_TEST`, and `neuralprophet_202110_CUSR0000SAF112_nlags_24_TEST`) and the corresponding scores (mean and standard deviation MAPE). These scores can be used to charactarize uncertainty around future forecasts. 
 
 With these results in hand, we can now produce this year's forecasts by refitting models (selected according to retrospective performance) that consume all available data.
 
-- Run the notebook `forecasting-prophet-final.ipynb` to produce final forecasts using Prophet.
-- Run the notebook `forecasting-nbeats-final.ipynb` to produce final forecasts using NBEATS (with historical food CPI only).
-- Run the notebook `forecasting-nbeatsfredvars-final.ipynb` to produce final forecasts using N-BEATS (with historical food CPI and other FRED variables)
-- Run the notebook `forecasting-neuralprophet-final.ipynb` to produce final forecasts using NeuralProphet, which depends on the presence of `ensemble_results.pkl` to indicate which features and number of lags to use.
+7. Run the notebook `forecasting-prophet-final.ipynb` to produce final forecasts using Prophet.
+8. Run the notebook `forecasting-nbeats-final.ipynb` to produce final forecasts using NBEATS (with historical food CPI only).
+9. Run the notebook `forecasting-nbeatsfredvars-final.ipynb` to produce final forecasts using N-BEATS (with historical food CPI and other FRED variables)
+10. Run the notebook `forecasting-neuralprophet-final.ipynb` to produce final forecasts using NeuralProphet, which depends on the presence of `ensemble_results.pkl` to indicate which features and number of lags to use.
 
 Finally, aggregate and analyze ensembles of final forecasts.
 
-- Run the notebook `forecasting-ensemble-final.ipynb` to produce this year's forecasts and analysis.
+11. Run the notebook `forecasting-ensemble-final.ipynb` to produce this year's forecasts and analysis.
 
 ## Our Results
 
