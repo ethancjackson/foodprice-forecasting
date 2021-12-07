@@ -11,7 +11,7 @@ To replicate the experiments and forecasts, you will need to use these packages 
 
 ## Setup
 
-To use this repository, please clone or fork it, then install dependencies using a Python environment. We used `conda` to create our environment and `pip` to install all dependencies.
+To use this repository, please clone or fork it, then install dependencies using a clean Python environment. We used `conda` to create our environment and `pip` to install all dependencies.
 
 ### GluonTS & MXNet
 
