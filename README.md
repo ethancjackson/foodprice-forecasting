@@ -129,4 +129,16 @@ The results of our retrospective (model selection) experiment are summarized bel
 
 ## Our Contributed Forecast
 
+The following table summarizes our contributed forecast to the 2022 edition of Canada's Food Price Report. Forecasts are presented in ranges that take the mean MAPE scored reported above into account. As one of several forecasts contributed to the Canada's Food Price Report team, these values should not be taken as an official prediction, but rather one set of predictions that was intended to be compared with several other groups' forecasts, which are based upon different datasets and methodologies.
 
+|                       CPI Category                      | 2022 Forecast (Predicted Year-Over-Year Percent Change) |
+|:-------------------------------------------------------:|---------------------------------------------------------|
+|     Bakery and cereal products (excluding baby food)    |                       -0.6% to +2.2                     |
+|                  Dairy products and eggs                |                      +0.5% to +3.7%                     |
+|          Fish, seafood and other marine products        |                      +2.7% to +4.9%                     |
+|              Food purchased from restaurants            |                      +4.6% to +5.8%                     |
+|                           Food                          |                      +0.6% to +2.2%                     |
+|            Fruit, fruit preparations and nuts           |                      +1.6% to +5.6%                     |
+|                           Meat                          |                      +2.3% to +7.5%                     |
+|      Other food products and non-alcoholic beverages    |                      +0.4% to +2.2%                     |
+|           Vegetables and vegetable preparations         |                      +6.4% to +12.2%                    |
