@@ -98,7 +98,7 @@ Finally, aggregate and analyze ensembles of final forecasts. All figures and res
 
 ## Our Results
 
-The results of our retrospective (model selection) experiment are summarized below. The ensemble configurations in the middle column were then used to fit the final forecasting models used to produce our contribution to the 2022 Canada's Food Price Report. 
+The results of our retrospective (model selection) experiment are summarized below. The ensemble configurations in the middle column were then used to fit the final forecasting models used to produce our contribution to the 2022 Canada's Food Price Report. A table describing FRED variables included in ensembles follows.
 
 |                          Category                         |                                                                        Best   Ensemble                                                                       |     Average   MAPE (± Std. Dev.)    |
 |:---------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------:|
@@ -112,7 +112,7 @@ The results of our retrospective (model selection) experiment are summarized bel
 |     Other   food products and non-alcoholic beverages     |     ['neuralprophet_202110_VXOCLS_nlags_36',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'prophet_202110']                                             |     0.86%   (±0.39%)                |
 |     Vegetables   and vegetable preparations               |     ['neuralprophet_202110_DEXCAUS_nlags_24',   'neuralprophet_202110_WILL5000IND_nlags_60',   'neuralprophet_202110_CPGRLE01CAM657N_nlags_60']              |     2.94%   (±1.16%)                |
 
-Several FRED variables were included in NeuralProphet models that were part of ensembles:
+
 
 | Variable ID     | Description                                                                                       |
 |-----------------|---------------------------------------------------------------------------------------------------|
