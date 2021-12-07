@@ -13,7 +13,7 @@ To replicate the experiments and forecasts, you will need to use these packages 
 
 To use this repository, please clone or fork it, then install dependencies using a Python environment. We used `conda` to create our environment and `pip` to install all dependencies.
 
-### GluonTS MXNet
+### GluonTS & MXNet
 
 We used the N-BEATS implementation provided by GluonTS, which depends on MXNet. If you are planning to use N-BEATS, we recommend that you configure your environment to use a GPU-enabled version of MXNet. Because GPU support for MXNet depends on your system configuration (e.g. GPU type and CUDA version), we cannot provide general instructions here. 
 
