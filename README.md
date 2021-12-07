@@ -96,7 +96,7 @@ Finally, aggregate and analyze ensembles of final forecasts. All figures and res
 
 11. Run the notebook `forecasting-ensemble-final.ipynb` to produce this year's forecasts and analysis.
 
-## Our Results
+## Our Experiment Results
 
 The results of our retrospective (model selection) experiment are summarized below. The ensemble configurations in the middle column were then used to fit the final forecasting models used to produce our contribution to the 2022 Canada's Food Price Report. A table describing FRED variables included in ensembles follows.
 
@@ -125,3 +125,8 @@ The results of our retrospective (model selection) experiment are summarized bel
 | QCAR368BIS      | Real Residential Property Prices for Canada                                                       |
 | VXOCLS          | CBOE S&P 100 Volatility Index: VXO                                                                |
 | WILL5000IND     | Wilshire 5000 Total Market Index                                                                  |
+
+
+## Our Contributed Forecast
+
+
