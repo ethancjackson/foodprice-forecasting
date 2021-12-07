@@ -49,8 +49,6 @@ For each model configuration, fit a model using data up to a cutoff point, e.g. 
 
 An example result of an ensembling experiment could be as follows:
 
-|     Category    |                                            Best   Ensemble                                          |     Average   MAPE (± Std. Dev.)    |   |   |
-|:---------------:|:---------------------------------------------------------------------------------------------------:|:-----------------------------------:|---|---|
-|     Meat        |     ['nbeatsfredvars_202110',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'nbeats_202110']    |           2.62%   (±1.10%)          |   |   |
-|                 |                                                                                                     |                                     |   |   |
-|                 |                                                                                                     |                                     |   |   |
+|     Category    |                                            Best   Ensemble                                          |     Average   MAPE (± Std. Dev.)    |
+|:---------------:|:---------------------------------------------------------------------------------------------------:|:-----------------------------------:|
+|     Meat        |     ['nbeatsfredvars_202110',   'neuralprophet_202110_CUSR0000SAF112_nlags_24', 'nbeats_202110']    |           2.62%   (±1.10%)          |
