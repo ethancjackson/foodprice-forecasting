@@ -15,8 +15,6 @@ Important Python dependencies include:
 - [Prophet](https://github.com/facebook/prophet)
 - [NeuralProphet](https://github.com/ourownstory/neural_prophet)
 - [GluonTS](https://github.com/awslabs/gluon-ts)
-- 
-
 
 ## Setup
 
