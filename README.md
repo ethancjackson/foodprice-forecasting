@@ -8,6 +8,15 @@ This repository can be used to replicate the experiments described on pages 16 a
 
 To replicate the experiments and forecasts, you will need to use these packages to access data and fit models. 
 
+Important Python dependencies include:
+
+- [stats-can](https://github.com/ianepreston/stats_can)
+- [fredapi](https://github.com/mortada/fredapi)
+- [Prophet](https://github.com/facebook/prophet)
+- [NeuralProphet](https://github.com/ourownstory/neural_prophet)
+- [GluonTS](https://github.com/awslabs/gluon-ts)
+- 
+
 
 ## Setup
 
