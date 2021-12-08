@@ -70,7 +70,7 @@ To replicate the experiments we used to produce contributed forecasts for the 20
 1. Run the notebook `load_data.ipynb` to produce the data file `all_data.csv`. You will be prompted for a FRED API key.
 2. Run the notebook `forecasting-prophet-experiment.ipynb` to produce retrospective forecasts using Prophet.
 3. Run the notebook `forecasting-nbeats-experiment.ipynb` to produce retrospective forecasts using N-BEATS (with historical food CPI only).
-4. Run the notebook `forecasting-nbeatsfredvars-experiment.ipynb` to produce retrospective forecasts using N-BEATS (with historical food CPI and other FRED variables)
+4. Run the notebook `forecasting-nbeats-fredvars-experiment.ipynb` to produce retrospective forecasts using N-BEATS (with historical food CPI and other FRED variables)
 5. Run the notebook `forecasting-neuralprophet-experiment.ipynb` to produce many retrospective forecasts using NeuralProphet (many combinations of lag sizes and additional regressors are considered). 
 
 After these each of these notebooks have finished running, the resulting retrospective forecasts will be stored under the `./output` directory. For example, after running the notebook `forecasting-prophet-experiment.ipynb` using the default `output_path = 'prophet_TEST'` in Cell 2, you should find the following files in `./output/prophet_TEST`:
