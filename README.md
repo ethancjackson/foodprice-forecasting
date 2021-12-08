@@ -26,7 +26,7 @@ We used the N-BEATS implementation provided by GluonTS, which depends on MXNet. 
 
 As an example only, we used the following steps to install MXNet and GluonTS:
 
-`pip install --upgrade mxnet-cu110~=1.7`
+`pip install mxnet-cu112`
 
 `pip install gluonts`
 
