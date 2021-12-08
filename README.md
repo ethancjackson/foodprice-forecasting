@@ -44,7 +44,7 @@ To replicate the experiments we used to produce contributed forecasts for the 20
 
 ### Load and Preprocess Data File
 
-We include a notebook (`load_data.ipynb`) for loading and preprocessing data from Statistics Canada and the Federal Reserve Economic Database (FRED). When running this notebook, you will be prompted to enter a FRED API key, which you can request directly at [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stlouisfed.org/docs/api/api_key.html). 
+We include a notebook (`load_data.ipynb`) for loading and preprocessing data from Statistics Canada and Federal Reserve Economic Data (FRED). When running this notebook, you will be prompted to enter a FRED API key, which you can request directly at [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stlouisfed.org/docs/api/api_key.html). 
 
 After `load_data.ipynb` runs successfully, a file named `all_data.csv` will be produced. Please check that this file contains rows with datestamps up to the most recently elapsed month.
 
