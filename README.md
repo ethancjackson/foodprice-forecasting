@@ -40,7 +40,6 @@ Other dependencies can be installed using the following command:
 
 ## Overview
 
-To replicate the experiments we used to produce contributed forecasts for the 2022 edition of Canada's Food Price Report, please use the following steps.
 
 ### Load and Preprocess Data File
 
@@ -62,9 +61,11 @@ An example result of an ensembling experiment could be as follows:
 
 This indicates that the best ensemble of models and forecasts for **Meat** we found in retrospective analysis over the last 6 report years used two N-BEATS models (with and without FRED variables) and a NeuralProphet model that uses 24 monthly historical observations of prior Meat CPI and an additional lagged regressor (CUSR0000SAF112), which is the U.S. CPI for Meats, Poultry, Fish, and Eggs in urban areas.
 
-### Running Experiments
+## Replication Instructions
 
-Experiments can be replicated by following these steps:
+To replicate the experiments we used to produce contributed forecasts for the 2022 edition of Canada's Food Price Report, please use the following numbered steps.
+
+### Running Experiments
 
 1. Run the notebook `load_data.ipynb` to produce the data file `all_data.csv`. You will be prompted for a FRED API key.
 2. Run the notebook `forecasting-prophet-experiment.ipynb` to produce retrospective forecasts using Prophet.
@@ -103,7 +104,7 @@ Finally, aggregate and analyze ensembles of final forecasts. All figures and res
 
 11. Run the notebook `forecasting-ensemble-final.ipynb` to produce this year's forecasts and analysis.
 
-## Our Experiment Results
+## Experiment Results
 
 The results of our retrospective (model selection) experiment are summarized below. The ensemble configurations in the middle column were then used to fit the final forecasting models used to produce our contribution to the 2022 Canada's Food Price Report. A table describing FRED variables included in ensembles follows.
 
