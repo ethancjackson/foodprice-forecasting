@@ -18,7 +18,7 @@ Important Python dependencies include:
 
 ## Setup
 
-To use this repository, please clone or fork it, then install dependencies using a clean Python environment. We used `conda` to create our environment and `pip` to install all dependencies.
+To use this repository, please clone or fork it, then install dependencies using a clean Python 3.8 environment. We used `conda` to create our environment and `pip` to install all dependencies.
 
 ### GluonTS & MXNet
 
