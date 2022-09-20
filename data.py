@@ -9,7 +9,7 @@ from stats_can import StatsCan
 import os
 from time import sleep
 
-API_KEY = "b87bd38f4622b9c19ed583bcfc97bd3e"
+API_KEY = "4536a5f45fa526b3876bed0020902640"
 
 food_categories = ["Bakery and cereal products (excluding baby food)",
                    "Dairy products and eggs",
@@ -114,7 +114,7 @@ def preprocess_targets(targets_df, columns=None, interpolate=True,
     return targets_df[columns]
 
 
-def update_expl_data(data_sources, expl_filename):
+def update_expl_data(data_sources, expl_filename, sleep_sec=0.5):
     if os.path.exists(expl_filename):
         # Update values for existing rows
         expl_df = pd.read_csv(expl_filename, index_col=0)
@@ -129,7 +129,7 @@ def update_expl_data(data_sources, expl_filename):
             expl_df = expl_df.join(new_df, how='right')
         expl_df.to_csv(expl_filename)
     else:
-        expl_df = load_fred(data_sources=data_sources, max_date='2019-12-31')
+        expl_df = load_fred(data_sources=data_sources, sleep_sec=sleep_sec)
         expl_df.to_csv(expl_filename)
     return expl_df[data_sources]
 
